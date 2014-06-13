@@ -57,7 +57,7 @@ body {
 }
 
 a {
-  color: #aaa;
+  color: #777;
 }
 a:hover {
   color: #c5000c;
@@ -79,7 +79,7 @@ header h1 {
 header h2 {
   letter-spacing: -1px;
   font-size: 24px;
-  color: #aaa;
+  color: #777;
   font-weight: normal;
   line-height: 1.3;
 }
@@ -89,14 +89,49 @@ header h2 {
   padding-bottom: 20px;
 }
 
+#bgImage {
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index: -2;
+}
+
 #container {
   /*background: transparent url(../images/IMG_5263.png) 50% 0 no-repeat;*/
-  min-height: 595px;
+}
+
+#headshot {
+  width:35%;
+  float:left;
+  border: 7px solid white;
+  margin-right: 20px;
 }
 
 .inner {
   width: 620px;
   margin: 0 auto;
+}
+
+#innerBg {
+  position:fixed;
+  left:0;
+  right:0;
+  margin-right:auto;
+  margin-left:auto;
+  padding-left: 80px;
+  padding-right: 60px;
+  width:50%;
+  height:100%;
+  top:0px;
+  /*background: url(../images/body-bg.png) 50% 0 repeat;*/
+  background-color: rgba(255,255,255,0.8);
+  z-index: -1;
+}
+
+#bodyContent {
+  position:relative;
 }
 
 #container .inner img {
@@ -105,6 +140,9 @@ header h2 {
 
 #downloads {
   margin-bottom: 40px;
+}
+
+#contactButtons {
 }
 
 a.button {
@@ -135,6 +173,7 @@ a.button {
   -webkit-box-shadow: 10px 10px 5px #888;
   -moz-box-shadow: 10px 10px 5px #888;
   box-shadow: 0px 1px 5px #e8e8e8;
+  z-index:2;
 }
 a.button:hover {
   border-top: solid 1px #b7b7b7;
@@ -278,7 +317,7 @@ h1 {
 h2 {
   font-size: 22px;
   font-weight: bold;
-  color: #303030;
+  color: #222;
   margin-bottom: 8px;
 } 
 
@@ -342,7 +381,7 @@ dl dt {
 footer {
   background: transparent url('../images/hr.png') 0 0 no-repeat;
   margin-top: 0px;
-  padding-top: 20px;
+  padding-top: 0px;
   padding-bottom: 30px;
   font-size: 13px;
   color: #aaa;
