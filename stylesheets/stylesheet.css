@@ -105,7 +105,7 @@ header h2 {
 #headshot {
   width:35%;
   float:left;
-  border: 7px solid white;
+  border: 7px solid #eee;
   margin-right: 20px;
 }
 
