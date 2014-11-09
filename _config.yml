@@ -3,6 +3,6 @@ defaults:
     scope:
       path: ""
       permalink: "pretty"
-      type: "posts"
+      type: "posts test"
     values: 
       layout: "default"
