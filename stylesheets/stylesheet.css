@@ -114,20 +114,25 @@ header h2 {
   margin: 0 auto;
 }
 
-#innerBg {
-  position:fixed;
+#inner-bg {
   left:0;
   right:0;
   margin-right:auto;
   margin-left:auto;
   padding-left: 80px;
   padding-right: 60px;
-  width:60%;
+  width:70%;
   height:100%;
   top:0px;
-  /*background: url(../images/body-bg.png) 50% 0 repeat;*/
+  bottom:0px;
   background-color: rgba(255,255,255,0.8);
   z-index: -1;
+}
+
+@media (max-device-width: 480px) {
+  #inner-bg {
+    width:90%;
+  }
 }
 
 #bodyContent {
@@ -194,6 +199,11 @@ a.button span {
   padding-left: 50px;
   display: block;
   height: 23px;
+}
+
+.center-table {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #download-zip span {
