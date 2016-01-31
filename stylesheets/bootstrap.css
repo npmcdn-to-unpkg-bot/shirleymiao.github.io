@@ -910,13 +910,10 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #428bca;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #2a6496;
-  text-decoration: underline;
 }
 a:focus {
   outline: thin dotted;
@@ -997,7 +994,7 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.1;
   color: inherit;
 }
