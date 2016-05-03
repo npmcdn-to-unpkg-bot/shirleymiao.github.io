@@ -1,0 +1,28 @@
+---
+
+title: InkChat, a collaborative digital ink web app
+layout: posts
+categories: projects
+permalink: /projects/inkchat
+
+---
+
+In summer 2014, I took on a software development position at Western University under <a href="https://uwaterloo.ca/math/about/people/smwatt">Dr. Stephen Watt</a>. We wanted to create a collaborative digital drawing environment for the web that was both real-time and efficient.
+
+<br><br>
+
+The result was <a href="http://inkchat.org/index.html">InkChat</a>.
+
+<br><br>
+
+<img src="/images/inkchat.png" style="width:85%">
+
+<br><br><br>
+InkChat allows for real-time streaming of digital ink traces, like the ones above. A trace is defined as a contiguous mark that begins at the canvas position where a pen, finger, or mouse click first occurs, and ends where that action is released. Each trace is sent individually using <a href="http://socket.io/">Socket.IO</a>, represented in <a href="https://www.w3.org/TR/InkML/">InkML</a> as a series of discrete (x,y) points. This allows the sending of ink traces between clients in a room to be pretty efficient. 
+
+<br><br><br>
+
+I was responsible for implementing many of the front-end components, including the drawing and erasing features, and integration of the <a href="http://fabricjs.com/">Fabric.js</a> library to allow for trace resizing and manipulation. I also helped to develop an image upload tool, which, among other things, can be used to draw on burrito cats. :D 
+
+<br><br>
+<img src="/images/inkchat-cat-min.png" style="width:85%">

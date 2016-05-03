@@ -1,0 +1,26 @@
+---
+
+title: An AngularDart latency testing framework at Google
+layout: posts
+categories: projects
+permalink: /projects/google
+
+---
+
+My internship project at Google focused on developing a latency testing framework with both manual and automated parts. The goal was to be able to determine inefficiencies in discrete AngularDart components, by creating mock instances of each component within a test environment, and recording the time taken to create each instance. Once spotted, inefficiencies could be handled by other Google developers, to reduce the load time for each view created in AngularDart.
+<br><br>
+In Angular (both Dart and JS), components are nested: that is, a higher-level component is constructed from smaller components, each of which can be constructed from smaller components yet. 
+
+<br><br><br>
+<img src="/images/angular1.png" style="width:80%">
+<br><br><br>
+
+So it makes sense that as you traverse up the component hierarchy, components take longer to render - proportional to the sum of the time its nested components take to render, in fact. Thus, it's possible to examine subcomponents for inefficiencies that propagate to all components that depend on it. 
+
+<br><br>
+I took advantage of this fact in the project. When rendering a mock component, I parsed out all of its dependencies and timed the duration taken to create each. It then became very simple to pinpoint which components were the heaviest, with respect to latency. 
+
+<br><br>
+The rest of my project involved defining a schema with <a href="http://bazel.io/">Bazel</a>, Google's build tool, for developers to specify which components they wanted to bootstrap and test with the framework.
+
+

@@ -1,0 +1,46 @@
+---
+
+title: Internationalization features at Facebook
+layout: posts
+categories: projects
+permalink: /projects/facebook
+
+---
+
+During my internship at Facebook, I worked on three main features for the Internationalization (i18n) team:
+
+<br><br>
+<ul>
+  <li>Integrating Android data into the existing i18n data pipeline</li>
+  <li>Implementing a "See Conversion" feature for user-generated text that should be converted to a readable format for a user</li>
+  <li>Creating A/B tests for UI changes to the language switchers on the Android client</li>
+</ul>
+<br>
+The data work consisted of querying and modifying existing data pipelines with Apache Hive and SQL, to process and account for a set of Android data that was previously collected, but not analyzed. This allowed for certain i18n services to be much more accurate, since many Facebook users use the Android client.
+<br><br>
+
+"See Conversion" was a feature for Facebook's mobile site that was necessary due to the incompatibility of certain languages' representations with Unicode encodings. For example, <a href="https://my.wikipedia.org/wiki/Wikipedia:Font">Zawgyi</a> is the most widely used encoding for input in Myanmar-language sites, but is not Unicode-compliant, resulting in incorrect renderings on Unicode devices. This conversion tool allows Zawgyi to be converted to Unicode in posts, similar to the "See Translation" tool. Note in the example below that corrupted characters are properly rendered in the converted version.
+
+<br><br>
+<div class="row" style="width:100%">
+	<div class="col-sm-6">
+		<img src="/images/burmese1.png" style="width:100%">
+	</div>
+	<div class="col-sm-6">
+		<img src="/images/burmese2.png" style="width:100%">
+	</div>
+</div>
+
+<br><br>
+Lastly, I implemented a number of UI changes to improve the use of the language switcher on Facebook's Android app. Below is one of these changes, found in the Bookmarks tab. I launched a similar update to allow for language switching from the Android login view.
+<br><br><br>
+<div class="row" style="width:90%">
+	<div class="col-sm-6">
+		<img src="/images/fb-android-screenshot2.jpg" style="width:100%">
+	</div>
+	<div class="col-sm-6">
+		<img src="/images/fb-android-screenshot1.jpg" style="width:100%">
+	</div>
+</div>
+
+

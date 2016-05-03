@@ -1,0 +1,22 @@
+---
+layout: default
+
+---
+
+<h3>{{ page.title }}</h3>
+<h5>
+	<br>
+  {{ content }}
+</h5>
+<br>
+<div class="PageNavigation">
+  {% if page.previous.url %}
+    <a class="prev" href="{{page.previous.url}}"><b>&laquo; Previous</b></a>
+  {% else %}
+    <a class="prev"></a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a class="next" href="{{page.next.url}}"><b>Next &raquo;</b></a>
+  {% endif %}
+</div>
